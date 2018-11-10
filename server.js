@@ -41,8 +41,6 @@ app.post('/message', (req, res) => {
   res.json(message.fallback)
 })
 
-app.
-
 
 // 실행 중 알 수 없는 부분에서 예외 발생할 경우 
 process.on('uncaughtException', err => {
