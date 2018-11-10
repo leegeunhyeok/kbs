@@ -13,6 +13,7 @@ if (config.has('port')) {
 }
 
 
+app.use('/img', express.static('img'))
 app.use(bodyParser.urlencoded({ extended: false }))
 app.use(bodyParser.json())
 
@@ -39,6 +40,8 @@ app.post('/message', (req, res) => {
   }
   res.json(message.fallback)
 })
+
+app.
 
 
 // 실행 중 알 수 없는 부분에서 예외 발생할 경우 
