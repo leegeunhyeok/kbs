@@ -50,5 +50,6 @@ process.on('uncaughtException', err => {
 
 // 서버 시작
 app.listen(app.get('port'), () => {
+  console.log(message.serverUrl)
   console.log('서버 실행 중.. 포트: ' + app.get('port'))
 })

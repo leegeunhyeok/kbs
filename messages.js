@@ -13,7 +13,9 @@
   }
 }
 
- */
+*/
+
+const config = require('config')
 
 
 /* 메인 버튼 */
@@ -45,13 +47,15 @@ const endButton = {
   ]
 }
 
+const serverUrl = `${config.get('server')}:${config.get('port')}`
+exports.serverUrl = serverUrl
 
 /* 뉴스 응답 데이터 */
 const newsRes = {
   message: {
     text: '[ 뉴스 ]를 원하시면, 아래의 메뉴 중에서 확인하시려는 [ 버튼 ]을 선택해주세요.',
     photo: {
-      url: '/img/2.KBS뉴스.png',
+      url: serverUrl + '/img/2.KBS뉴스.png',
       width: 640,
       height: 480
     }
@@ -133,7 +137,7 @@ exports.datas = [
       message: {
         text: '[ 뉴스제보 ]를 원하시면, 아래의 메뉴 중에서 확인하시려는 [ 버튼 ]을 선택해주세요.',
         photo: {
-          url: '/img/1.KBS제보.png',
+          url: serverUrl + '/img/1.KBS제보.png',
           width: 640,
           height: 480
         }
@@ -154,7 +158,7 @@ exports.datas = [
       message: {
         text: '[ 뉴스제보 ]를 원하시면, 아래의 메뉴 중에서 확인하시려는 [ 버튼 ]을 선택해주세요.',
         photo: {
-          url: '/img/1.KBS제보.png',
+          url: serverUrl + '/img/1.KBS제보.png',
           width: 640,
           height: 480
         }
@@ -290,7 +294,7 @@ exports.datas = [
       message: {
         text: '[ 프로그램 ]을 원하시면, 아래의 메뉴 중에서 확인하시려는 [ 버튼 ]을 선택해주세요.',
         photo: {
-          url: '/img/3.프로그램.png',
+          url: serverUrl + '/img/3.프로그램.png',
           width: 640,
           height: 480
         }
@@ -335,7 +339,7 @@ exports.datas = [
       message: {
         text: '감사합니다. 아래의 메뉴 중에서 확인하시려는 [ 버튼 ]을 선택해주세요.',
         photo: {
-          url: '/img/3.프로그램.png',
+          url: serverUrl + '/img/3.프로그램.png',
           width: 640,
           height: 480
         }
@@ -1473,7 +1477,7 @@ exports.datas = [
       message: {
         text: '[ 아나운서 프로필 ]을 원하시면, 아래의 메뉴 중에서 확인하시려는 [ 버튼 ]을 선택해주세요.',
         photo: {
-          url: '/img/4.아나운서.png',
+          url: serverUrl + '/img/4.아나운서.png',
           width: 640,
           height: 480
         }
@@ -1604,7 +1608,7 @@ exports.datas = [
       message: {
         text: '[ 기상캐스터 프로필 ]을 원하시면, 아래의 메뉴 중에서 확인하시려는 [ 버튼 ]을 선택해주세요.',
         photo: {
-          url: '/img/5.기상캐스터.png',
+          url: serverUrl + '/img/5.기상캐스터.png',
           width: 640,
           height: 480
         }
@@ -1651,7 +1655,7 @@ exports.datas = [
       message: {
         text: '[ 실시간방송 ]을 원하시면, 아래의 메뉴 중에서 확인하시려는 [ 버튼 ]을 선택해주세요.',
         photo: {
-          url: '/img/6.실시간방송.png',
+          url: serverUrl + '/img/6.실시간방송.png',
           width: 640,
           height: 480
         }
@@ -1673,7 +1677,7 @@ exports.datas = [
       message: {
         text: '감사합니다. 아래의 메뉴 중에서 확인하시려는 [ 버튼 ]을 선택해주세요.',
         photo: {
-          url: '/img/6.실시간방송.png',
+          url: serverUrl + '/img/6.실시간방송.png',
           width: 640,
           height: 480
         }
@@ -1892,7 +1896,7 @@ exports.datas = [
       message: {
         text: '[ KBS부산 안내 ]를 원하시면, 아래의 메뉴 중에서 확인하시려는 [ 버튼 ]을 선택해주세요.',
         photo: {
-          url: '/img/7.KBS부산.png',
+          url: serverUrl + '/img/7.KBS부산.png',
           width: 640,
           height: 480
         }
@@ -1927,7 +1931,7 @@ exports.datas = [
       message: {
         text: '◇ KBS부산 연락처',
         photo: {
-          url: '/img/조직 및 부산 연락처.png',
+          url: serverUrl + '/img/조직 및 부산 연락처.png',
           width: 480,
           height: 640
         }
@@ -2111,7 +2115,7 @@ exports.datas = [
       message: {
         text: '[ KBS부산 홀/문화행사 ]를 원하시면, 아래의 메뉴 중에서 확인하시려는 [ 버튼 ]을 선택해주세요.',
         photo: {
-          url: '/img/8.부산홀.png',
+          url: serverUrl + '/img/8.부산홀.png',
           width: 640,
           height: 480
         }
@@ -2186,7 +2190,7 @@ exports.datas = [
       message: {
         text: '[ 견학/광고 ]를 원하시면, 아래의 메뉴 중에서 확인하시려는 [ 버튼 ]을 선택해주세요.',
         photo: {
-          url: '/img/9.견학.png',
+          url: serverUrl + '/img/9.견학.png',
           width: 640,
           height: 480
         }
@@ -2247,7 +2251,7 @@ exports.datas = [
       message: {
         text: '[ 날씨/교통/관광지도 ]를 원하시면, 아래의 메뉴 중에서 확인하시려는 [ 버튼 ]을 선택해주세요.',
         photo: {
-          url: '/img/10.날씨.png',
+          url: serverUrl + '/img/10.날씨.png',
           width: 640,
           height: 480
         }
@@ -2329,7 +2333,7 @@ exports.datas = [
       message: {
         text: '◇ 관광정보',
         photo: {
-          url: '/img/부산관광지도.png',
+          url: serverUrl + '/img/부산관광지도.png',
           width: 640,
           height: 480
         }
