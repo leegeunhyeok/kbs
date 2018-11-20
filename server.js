@@ -2,6 +2,14 @@ const express = require('express')
 const bodyParser = require('body-parser')
 const config = require('config')
 const message = require('./messages.js')
+const publicIp = require('public-ip')
+
+publicIp.v4().then(ip => {
+  console.log(ip)
+  serverUrl = `${ip}:${config.get('port')}`
+}).catch(e => {
+  console.log(e)
+})
 
 const app = express()
 
@@ -20,7 +28,7 @@ app.use(bodyParser.json())
 
 // GET /keyboard
 app.get('/keyboard', (req, res) => {
-  res.json(message.main)
+  res.json(message.start)
 })
 
 
