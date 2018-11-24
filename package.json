@@ -10,8 +10,10 @@
   "license": "ISC",
   "dependencies": {
     "body-parser": "^1.18.3",
+    "cheerio": "^1.0.0-rc.2",
     "config": "^2.0.1",
     "express": "^4.16.4",
-    "public-ip": "^2.4.0"
+    "public-ip": "^2.4.0",
+    "request": "^2.88.0"
   }
 }
