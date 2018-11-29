@@ -3588,25 +3588,6 @@ publicIp.v4().then(ip => {
       }
     },
     {
-      hook: '◇ 부산 날씨정보',
-      res: {
-        message: {
-          text: '◇ 부산 날씨정보는 준비 중.'
-        },
-        keyboard: {
-          type: 'buttons',
-          buttons: [
-            '◇ 부산 날씨정보',
-            '◇ 미세먼지정보',
-            '◇ 교통정보',
-            '◇ 버스정보',
-            '◇ 도시철도정보',
-            '◆ 이전 단계로 (서비스메뉴)'
-          ]
-        }
-      }
-    },
-    {
       hook: '◇ 교통정보',
       res: {
         message: {
@@ -3749,5 +3730,5 @@ publicIp.v4().then(ip => {
   exports.fallback = fallback_text
   exports.datas = datas
 
-  console.log(serverUrl)
+  console.log(('Server url: ' + serverUrl).bgGreen.black)
 })
