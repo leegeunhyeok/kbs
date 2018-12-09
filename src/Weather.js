@@ -55,14 +55,13 @@ Weather.get = async function () {
       let resultString = ''
       const pub = rows[0].pub
       rows.forEach(row => {
-        resultString += `[${row.hour > 12 ? '오후':'오전'}` +
-                        ` ${row.hour > 12 ? row.hour - 12 : row.hour}시]\n` +
-                        `- 기온: ${row.temp}℃\n` +
-                        `- 강수형태: ${this._pty[row.pty]}\n` + 
-                        `- 강수확률: ${row.pop}%, ${row.wfKor}\n` + 
-                        `- 습도: ${row.reh}%\n\n`
+        resultString += `◐ ${row.hour > 12 ? '오후':'오전'}` +
+                        ` ${row.hour > 12 ? row.hour - 12 : row.hour}시 ◑\n` +
+                        ` ▷ 기온: ${row.temp}℃\n` +
+                        ` ▷ 강수확률: ${row.pop}%, ${row.wfKor}\n` +
+                        ` ▷ 습도: ${row.reh}%\n\n`
       })
-      return resultString + pub + ' 발표\n광안 제2동 날씨 기준'
+      return '< ' + resultString + pub + ' 발표 >\n   : 광안 제2동 날씨 기준'
     } else {
       return '날씨 데이터가 없습니다.'
     }

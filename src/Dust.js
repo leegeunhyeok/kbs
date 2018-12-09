@@ -41,7 +41,7 @@ Dust.update = async function () {
       if ($(this).text() === '부산') {
         tds.each(function (td_idx) {
           if (idx === td_idx) {
-            result += dayString[day++] + ": " + $(this).text() + '\n'
+            result += ' ▷ ' + dayString[day++] + ": " + $(this).text() + '\n'
           }
         })
       }
@@ -56,7 +56,7 @@ Dust.update = async function () {
 Dust.get = async function () {
   try {
     const dust = await DustModel.get()
-    return '미세먼지 정보입니다.\n\n' + dust.info
+    return '◐ 미세먼지 정보 ◑\n' + dust.info
   } catch (e) {
     console.log(e.message.red)
     return '죄송합니다. 현재 미세먼지 정보를 불러올 수 없습니다.'
