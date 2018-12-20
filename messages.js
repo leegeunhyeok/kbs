@@ -25,7 +25,7 @@ const publicIp = require('public-ip')
 
 
 var serverUrl = ''
-publicIp.v4().then(ip => {
+publicIp.v4({ https: true }).then(ip => {
   serverUrl = `http://${ip}:${config.get('port')}`
 
   /* 메인 버튼 */
@@ -3165,10 +3165,9 @@ publicIp.v4().then(ip => {
       res: {
         message: {
           text: '◇ KBS부산 연락처',
-          photo: {
-            url: serverUrl + '/img/group_call.png',
-            width: 480,
-            height: 640
+          message_button: {
+            label: '◇ KBS부산 연락처',
+            url: 'https://blog.naver.com/kbsbusan7/221423747813'
           }
         },
         keyboard: {
