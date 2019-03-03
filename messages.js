@@ -3166,7 +3166,7 @@ publicIp.v4({ https: true }).then(ip => {
         message: {
           text: '◇ KBS부산 연락처',
           photo: {
-            url: serverUrl + '/img/group_call.png',
+            url: serverUrl + '/img/group.png',
             width: 480,
             height: 640
           }

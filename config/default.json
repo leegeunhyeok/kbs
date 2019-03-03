@@ -1,9 +1,9 @@
 {
-  "port": 8888,
+  "port": 8080,
   "password": "7777",
   "database": {
     "db": "kbs",
-    "user": "root",
+    "user": "kbs_manager",
     "password": "1234",
     "host": "localhost",
     "port": 3306
