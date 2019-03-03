@@ -3165,9 +3165,10 @@ publicIp.v4({ https: true }).then(ip => {
       res: {
         message: {
           text: '◇ KBS부산 연락처',
-          message_button: {
-            label: '◇ KBS부산 연락처',
-            url: 'https://blog.naver.com/kbsbusan7/221423747813'
+          photo: {
+            url: serverUrl + '/img/group_call.png',
+            width: 480,
+            height: 640
           }
         },
         keyboard: {
